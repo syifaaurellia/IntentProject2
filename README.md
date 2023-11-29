@@ -562,7 +562,35 @@ Film dokumenter buatan Netflix ini menyoroti rangkaian persidangan yang saat itu
 </layer-list>
 ```
 
-## A. Code Project Hello World
+## A. Code Project Splash Screen
+
+> `SplashScreen.java`
+```
+package com.cipaapps;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.Handler;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+public class SplashScreen extends AppCompatActivity {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                startActivity(new Intent(SplashScreen.this, MainActivity.class));
+                finish();
+            }
+        }, 2500);
+    }
+}
+```
+
+## B. Code Project Hello World
 > `activity_hello.xml`
 ```
 <?xml version="1.0" encoding="utf-8"?>
@@ -618,7 +646,7 @@ public class HelloActivity extends AppCompatActivity{
 }
 ```
 
-## B. Code Project Count
+## C. Code Project Count
 > `activity_count.xml`
 ```
 <?xml version="1.0" encoding="utf-8"?>
@@ -849,7 +877,7 @@ public class CountActivity extends AppCompatActivity {
 }
 ```
 
-## C. Code Project Scroll Movie
+## D. Code Project Scroll Movie
 > `activity_scrollmovie.xml`
 ```
 <?xml version="1.0" encoding="utf-8"?>
@@ -921,7 +949,7 @@ public class SianidaActivity extends AppCompatActivity {
 }
 ```
 
-## Code Project Two Activity
+## E. Code Project Two Activity
 > `activity_twoactivity.xml`
 ```
 <?xml version="1.0" encoding="utf-8"?>
